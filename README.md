@@ -7,27 +7,17 @@ To develop a Python program to find the optimal policy for the given RL environm
 To find the optimal policy for the given RL environnment Frozen Lake using the Monte Carlo algorithm which use both exploration and exploitation for finding the optimal policy. Exploitation: Agent taking an action based on the current knowledge. Exploration: Agent taking a new action to learn new information. The epsilon is used to balance the exploration and exploitation, The value of the epsilon decreases gradually which indicates sufficient exploration and the agent has gained the new information.
 
 ## MONTE CARLO CONTROL ALGORITHM:
-```
+
 1. Initialize the state value function V(s) and the policy π(s) arbitrarily.
-
-2. Generate an episode using π(s) and store the state, action, and reward sequence.
-
+2. Generate an episode using π(s) and store the state, action, and reward sequence
 3. For each state s appearing in the episode:
-
-4. G ← return following the first occurrence of s Append G to Returns(s) V(s) ← average(Returns(s)) For each state s in
-   the episode: π(s) ← argmax_a ∑_s' P(s'|s,a)V(s') Repeat steps 2-4 until the policy converges.
-
-5. Use the function decay_schedule to decay the value of epsilon and alpha.
-
+4. G ← return following the first occurrence of s Append G to Returns(s) V(s) ← average(Returns(s)) For each state s in the episode: π(s) ← argmax_a ∑_s' P(s'|s,a)V(s') Repeat steps 2-4 until the policy converges.
+5. Use the function decay_schedule to decay the value of epsilon and alpha
 6. Use the function gen_traj to generate a trajectory.
-
 7. Use the function tqdm to display the progress bar.
-
 8. After the policy converges, use the function np.argmax to find the optimal policy. The function takes the following arguments:
 
 Q: The Q-table. axis: The axis along which to find the maximum value.
-
-```
 
 ```
 Developed by : Palamakula Deepika
